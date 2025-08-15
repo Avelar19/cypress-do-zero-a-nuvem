@@ -1,28 +1,56 @@
-# 🌲 Cypress, do Zero à Nuvem ☁️
+# Cypress do Zero à Nuvem
 
-👋 Seja bem-vindo(a)!
+Este projeto tem como objetivo demonstrar, na prática, como utilizar o Cypress para automação de testes end-to-end em aplicações web, desde a configuração inicial até a execução dos testes em ambiente de nuvem.
 
-É muito bom tê-lo(a) aqui. Tenho certeza que você vai amar esse curso. ❤️
+## Pré-requisitos
 
-## O que você vai aprender?
+Antes de começar, certifique-se de ter instalado em sua máquina:
 
-- Como configurar um projeto Cypress do zero
-- Como visitar páginas locais e remotas
-- Como lidar com os elementos mais comuns encontrados em aplicações web
-- Como testar upload de arquivos
-- Como realizar as mais diversas verificações de resultados esperados
-- Como criar comandos customizados
-- Como lidar com links que abrem em outra aba do navegador
-- Como rodar testes simulando as dimensões de um dispositivo móvel
-- Como resolver os mesmos problemas de diferentes formas, conhecendo a [API do Cypress](https://docs.cypress.io/api/table-of-contents)
-- Como criar uma documentação mínima para seu projeto de testes automatizados
-- Como executar os testes em um _workflow_ de integração contínua sempre que mudanças ocorrerem no código da aplicação (ou dos testes)
-- Como integrar seu _workflow_ de integração contínua com o Cypress Cloud (o serviço de gestão de testes do Cypress na nuvem)
+- [Node.js](https://nodejs.org/) (versão recomendada: 14.x ou superior)
+- [npm](https://www.npmjs.com/) (geralmente já vem com o Node.js)
+- [git](https://git-scm.com/)
 
-## Vamos começar?
+## Instalação
 
-Vá para a seção [estrutura do curso](./lessons/_course-structure_.md).
+Clone o repositório e instale as dependências do projeto:
 
-___
+```bash
+git clone <url-do-repositorio>
+cd cypress-do-zero-a-nuvem
+npm install
+```
 
-Este é um curso da **Escola Talking About Testing**.
+## Como rodar os testes
+
+Para executar os testes localmente, utilize o comando:
+
+```bash
+npx cypress open
+```
+
+Ou para rodar em modo headless (sem interface gráfica):
+
+```bash
+npx cypress run
+```
+
+## Como fazer commit e push para a branch main do seu fork
+
+Após realizar alterações nos arquivos, siga os passos abaixo para fazer commit direto na branch `main` do seu fork e enviar para o GitHub:
+
+```bash
+git add .
+git commit -m "Descreva aqui a mensagem do commit"
+git push origin main
+```
+
+Esses comandos vão adicionar todas as alterações, criar um commit e enviar para a branch `main` do seu repositório forkado.
+
+## Outras informações
+
+- Os testes estão localizados na pasta `cypress/e2e`.
+- Para configurar variáveis de ambiente, utilize o arquivo `.env`.
+- Consulte a [documentação oficial do Cypress](https://docs.cypress.io/) para mais detalhes e customizações.
+- Caso encontre problemas, verifique se todos os pré-requisitos estão corretamente instalados.
+
+---
