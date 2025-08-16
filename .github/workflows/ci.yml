@@ -6,9 +6,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Cypress run
+      - name: Instalar dependências
+        run: npm ci
+      # Se precisar rodar um servidor, descomente e ajuste as linhas abaixo:
+      # - name: Iniciar servidor
+      #   run: npm start &
+      # - name: Esperar servidor
+      #   uses: jakejarvis/wait-action@v0.1.0
+      #   with:
+      #     url: 'http://localhost:3000'
+      - name: Cypress run (Cloud)
         uses: cypress-io/github-action@v6
+        with:
+          record: true
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-        with:
-          command: npm run test:cloud
